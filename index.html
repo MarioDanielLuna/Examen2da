@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+    <!-- scripts -->
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+    <title>Examen</title>
+</head>
+
+   
+    <main class="container-fluid mt-3">
+        
+        <nav class="navbar navbar-light elegant-color">
+            <span class="navbar-brand "><h2 class="text-monospace white-text" >Examen 2da oportunidad</h2></span>
+          </nav>
+        </section>
+            
+        </section>
+        <section class="row mt-3 "> 
+            <div class="row container-fluid my-5">
+                <!-- Formulario para subir archivo -->
+                <div class="col-md-6 ">
+                    
+                    <div class="jumbotron col-md-12 elegant-color z-depth-1 rounded ">
+                        <div class="row">   
+                            <h2 class="text-monospace white-text" >Elegir imágen.</h2>
+                            <div class="input-group">
+                             
+                                <div class="custom-file">
+                                    
+                                    <input type="url" placeholder="URL" id="url" style="width:50%; height:100%;">
+                                      
+                                    <button class="button"   id="bcarga"  onchange="mostrar()" style=" top: 1px; left:90px;">
+                                        CARGAR</button>
+                                    
+                        
+                                
+                                    
+                                </div>
+                            </div>
+                            <div class="custom-file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jumbotron col-md-12 elegant-color z-depth-1 rounded ">
+                        <h2 class="text-monospace white-text" id="hola">Marcadores QR</h2>
+                        <div class="row">
+                            <div class="card border-default mb-3 elegant-color z-depth-1 rounded">
+                                <div class="text-break white-text">
+                                  <img src="Marcado1.jpg" width="200" height="200">
+                           
+                                
+                                    
+                                   </div>
+                              </div>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+                <!-- Div para camara -->
+                <div class="row d-flex "> 
+                    <!--Camara  -->
+                    <div style='position: fixed; top: 150px; width:30%; text-align: center; z-index: 1;'>
+                 <button class="button" id="IronMan">IronMan</button>
+                 
+                
+               </div>
+             
+             <body style='margin : 0px; overflow: hidden;'></body>
+             
+                  
+             <iframe src="camara.html" name="prueba" id="prueba" width="500" height="250"></iframe>
+                 
+                     <a-marker preset="hiro">
+                         
+                     <a-entity id="entidad" obj-model="obj: url(modelos/IronMan.obj); mtl: url(modelos/IronMan.mtl)" scale=".30 .30 30" >
+                         </a-marker>
+                         <a-entity camara></a-entity>
+                 </a-scene>
+                
+                
+                <script> 
+             
+             
+             
+             document.getElementById("IronMan").addEventListener("click", (e)=>{
+             
+                   var el = document.querySelector("identidad");
+             
+                   el.setAttribute ("obj-model", 'obj:url(modelo/IronMan/IronMan.obj); mtl:url(modelo/IronMan/IronMan.mtl)');
+                   el.setAttribute("scale",'.005 .005 .005');
+             
+             })
+             
+             
+             </script>
+            
+         </div>
+         
+     </div>
+    
+ </section>
+</main>
+
+        <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+</div>
+    <!-- Footer Elements -->
+  
+    <div class="footer-copyright text-center py-3 elegant-color z-depth-1 rounded">© 2020 Copyright: Mario Daniel Luna
+     
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+    </main>
+    <!-- End main -->
+
+   
+</body>
